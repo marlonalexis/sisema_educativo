@@ -40,3 +40,25 @@ php artisan app:name sisEducativo
 - Modo Debug
 - Timezone
 - Lenguage
+
+*- Estructura Laravel -*
+Usuario hace las peticiones web, estas peticiones son enrutadas y notificadas al controlador, el controlador procesa
+la peticion y decide si muestra una vista al usuario final o van al modelo, el modelo es aquel que hace las consultas a la base de datos y retorna la informacion necesaria al controlador, el contrador decida que datos entregar a quien y cuando.
+
+
+*- Mapear la base de datos -*
+Eloquent = Es un ORM(Object-Relational mapping), es una forma de mapear los datos que se encuentran en la base de datos retorna un script SQL a objectos PHP
+Los modelos hacen uso de PSR-4 y namespaces
+
+Crear modelo: php artisan make:model Personas
+
+*- Controladores -* 
+Un controlador usualmente trabaja asociando las peticiones con los metodos:
+GET: index, create, show, edit
+POST: store
+PUT: update
+DELETE: destroy
+PATCH: update
+
+
+/* Vista Motor de vista blade */

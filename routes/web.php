@@ -50,3 +50,6 @@ Route::get('/', function()
 {
     return view('home', array('nombre' => 'Marlon'));
 });
+
+/* Ligar vista con el controlador */
+Route::resource('my/personas','PersonasController');
