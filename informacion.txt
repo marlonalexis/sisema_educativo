@@ -1,0 +1,42 @@
+Verbos HTTP
+Get: recuperar información, podemos enviar datos para indicar qué se desea recuperar, pero mediante get en principio no se debería generar nada, ningún tipo de recurso en el servidor o aplicación, porque los datos se verán en la URL y puede ser inseguro. 
+Post: enviar datos que se indicarán en la propia. Esos datos no se verán en la solicitud, puesto que viajan con la información del protocolo. 
+Put: esto sirve para enviar un recurso, subir archivos al servidor, por ejemplo. No está activo en muchas configuraciones de servidores web. Con put se supone que los datos que estamos enviando son para que se cree algún tipo de recurso en el servidor. 
+Delete: borrado de algo. 
+Trace, patch, link, unlink, options y connect… no están entre los verbos comunes de Laravel, por lo que te referimos a la Wikipedia para más información.
+
+
+-- Crear controlador
+php artisan make:controller TaskController
+mas validaciones
+      make:auth
+      make:command
+      make:controller
+      make:event
+      make:exception
+      make:factory
+      make:job
+      make:listener
+      make:mail
+      make:middleware
+      make:migration
+      make:model
+      make:notification
+      make:policy
+      make:provider
+      make:request
+      make:resource
+      make:rule
+      make:seeder
+      make:test
+
+
+Link Tuto en video - https://www.youtube.com/watch?v=m5MZ4g-_-Dw
+
+-- Para cambiar el nombre del proyecto 
+php artisan app:name sisEducativo
+
+-- Configuraciones Generales
+- Modo Debug
+- Timezone
+- Lenguage
