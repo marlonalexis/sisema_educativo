@@ -1,7 +1,7 @@
 @extends('layout.admin')
 @section('contenido')
 		<div class="card-header">
-			<h3>Nueva Persona</h3>
+			<h3>Editar Persona: {{$personas->nombres}}</h3>
 			@if (count($errors)>0)
 			<div class="alert alert-danger mb-2" role="alert">
 					@foreach ($errors->all() as $error)
@@ -9,7 +9,7 @@
 					@endforeach
 			</div>
 			@endif
-			{!!Form::open(array('url'=>'my/personas','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::model($personas,['method'=>'PATCH','route'=>['my.personas.update',$personas->idpersonas]])!!}
 			{{Form::token()}}
 									<form class="form">
 							<div class="form-body">
@@ -18,13 +18,13 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="nombres">Nombres</label>
-											<input type="text" id="nombres" class="form-control" placeholder="Nombres" name="nombres">
+											<input type="text" id="nombres" class="form-control" value="{{$personas->nombres}}" placeholder="Nombres" name="nombres">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="apellidos">Apellidos</label>
-											<input type="text" id="apellidos" class="form-control" placeholder="Apellidos" name="apellidos">
+											<input type="text" id="apellidos" class="form-control" value="{{$personas->apellidos}}" placeholder="Apellidos" name="apellidos">
 										</div>
 									</div>
 								</div>

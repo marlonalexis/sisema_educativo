@@ -25,7 +25,7 @@ class PersonasFormRequest extends FormRequest
     {
         return [
             'nombres' => 'required|max:50',
-            'apellidos' => 'required|max:250'
+            'apellidos' => 'required|max:250',
         ];
     }
 }

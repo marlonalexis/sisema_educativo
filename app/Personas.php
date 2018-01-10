@@ -16,7 +16,7 @@ class Personas extends Model
 	protected $fillable =[
 		'nombres',
 		'apellidos',
-		'estado'
+		'estado',
 	];
 
 	//Atributos que no se asignan al modelo

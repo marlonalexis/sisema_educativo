@@ -17,12 +17,12 @@ Route::get('/', function () {
 
 /* Creacion de ruta de prueba 
 Nota: El orden en el que pongamos las rutas es importante, puesto que primero se gestionarán las que aparezcan antes en el código. */
-Route::get('/test', function(){
+/*Route::get('/test', function(){
 	echo "Esto es una simple prueba!!";
 });
 
 /* Creacion de ruta de prueba con parametro */
-Route::get('colaboradores/{nombre}', function($nombre){
+/*Route::get('colaboradores/{nombre}', function($nombre){
 	return "Mostrando el colaborador $nombre";
 });
 
@@ -36,20 +36,20 @@ public function producto($id)
 } */
 
 /* Definir una ruta recibiendo variablews de entradas y variables declaradas */
-Route::get('categoria/{categoria}/{pagina?}', function($categoria, $pagina = 1){
+/*Route::get('categoria/{categoria}/{pagina?}', function($categoria, $pagina = 1){
 	return "Viendo categoría $categoria y página $pagina";
 });
 
 /* Definir el tipo de parametro de entrada */
-Route::get('colaboradores/{nombre}', function($nombre){
+/*Route::get('colaboradores/{nombre}', function($nombre){
 	return "Mostrando el colaborador $nombre";
-})->where(array('nombre' => '[a-zA-Z]+'));
+})->where(array('nombre' => '[a-zA-Z]+'));*/
 
 /* Referenciar vista */
-Route::get('/', function()
+/*Route::get('/', function()
 {
     return view('home', array('nombre' => 'Marlon'));
-});
+});*/
 
 /* Ligar vista con el controlador */
 Route::resource('my/personas','PersonasController');

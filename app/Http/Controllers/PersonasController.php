@@ -5,9 +5,9 @@ namespace sisEducativo\Http\Controllers;
 use Illuminate\Http\Request;
 use sisEducativo\Http\Controllers\Controller;
 use sisEducativo\Personas;
-use sisEducativo\Http\Request\PersonasFormRequest;
-use Illuminate\Support\Farcades\Redirect;
-use DB;
+use sisEducativo\Http\Requests\PersonasFormRequest;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 
 class PersonasController extends Controller
 {
@@ -24,7 +24,7 @@ class PersonasController extends Controller
     		->where('estado','=','A')
     		->orderBy('apellidos','asc')
     		->paginate(4);
-    		return view('my.personas.index',["personas"=>$personas,"searchText"=>$query]);
+    		return view('my.personas.index',['personas'=>$personas,'searchText'=>$query]);
     	}
     }
 
