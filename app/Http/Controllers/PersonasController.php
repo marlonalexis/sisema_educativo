@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use sisEducativo\Http\Controllers\Controller;
 use sisEducativo\Personas;
 use sisEducativo\Http\Request\PersonasFormRequest;
+use Illuminate\Support\Farcades\Redirect;
 use DB;
 
 class PersonasController extends Controller
@@ -20,10 +21,10 @@ class PersonasController extends Controller
     	if ($request) {
     		$query=trim($request->get('searchText')); //Obtener todos los registros de la base de datos
     		$personas=DB::table('personas')->where('nombres','LIKE','%'.$query.'%')
-    		->where('estado','=','1')
-    		->orderBy('idpersonas','desc')
-    		->paginate(3);
-    		return view("my.personas.index",["personas"=>$personas,"searchText"=>$query]);
+    		->where('estado','=','A')
+    		->orderBy('apellidos','asc')
+    		->paginate(4);
+    		return view('my.personas.index',["personas"=>$personas,"searchText"=>$query]);
     	}
     }
 
