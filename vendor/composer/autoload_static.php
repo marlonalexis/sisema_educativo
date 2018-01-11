@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit343816c7766afc68e6cd1515246c192d
+class ComposerStaticInit98a3b176e8cb55f82734fcc1fab69094
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -16,6 +16,7 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -78,6 +79,7 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         array (
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
+            'Landish\\Pagination\\' => 19,
         ),
         'I' => 
         array (
@@ -102,6 +104,7 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
     );
@@ -229,6 +232,10 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Landish\\Pagination\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/landish/pagination/src',
+        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -264,6 +271,10 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
+        ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
         ),
         'Carbon\\' => 
         array (
@@ -316,6 +327,13 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',
@@ -1709,6 +1727,17 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'Landish\\Pagination\\Materialize' => __DIR__ . '/..' . '/landish/pagination/src/Materialize.php',
+        'Landish\\Pagination\\Pagination' => __DIR__ . '/..' . '/landish/pagination/src/Pagination.php',
+        'Landish\\Pagination\\PaginationHTML' => __DIR__ . '/..' . '/landish/pagination/src/PaginationHTML.php',
+        'Landish\\Pagination\\SemanticUI' => __DIR__ . '/..' . '/landish/pagination/src/SemanticUI.php',
+        'Landish\\Pagination\\Simple\\Materialize' => __DIR__ . '/..' . '/landish/pagination/src/Simple/Materialize.php',
+        'Landish\\Pagination\\Simple\\Pagination' => __DIR__ . '/..' . '/landish/pagination/src/Simple/Pagination.php',
+        'Landish\\Pagination\\Simple\\SemanticUI' => __DIR__ . '/..' . '/landish/pagination/src/Simple/SemanticUI.php',
+        'Landish\\Pagination\\Simple\\UIKit' => __DIR__ . '/..' . '/landish/pagination/src/Simple/UIKit.php',
+        'Landish\\Pagination\\Simple\\ZurbFoundation' => __DIR__ . '/..' . '/landish/pagination/src/Simple/ZurbFoundation.php',
+        'Landish\\Pagination\\UIKit' => __DIR__ . '/..' . '/landish/pagination/src/UIKit.php',
+        'Landish\\Pagination\\ZurbFoundation' => __DIR__ . '/..' . '/landish/pagination/src/ZurbFoundation.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
@@ -2298,7 +2327,6 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
         'Parsedown' => __DIR__ . '/..' . '/erusev/parsedown/Parsedown.php',
-        'PersonasSeeder' => __DIR__ . '/../..' . '/database/seeds/PersonasSeeder.php',
         'PharIo\\Manifest\\Application' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Application.php',
         'PharIo\\Manifest\\ApplicationName' => __DIR__ . '/..' . '/phar-io/manifest/src/values/ApplicationName.php',
         'PharIo\\Manifest\\Author' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Author.php',
@@ -3613,7 +3641,7 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'sisEducativo\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'sisEducativo\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'sisEducativo\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'sisEducativo\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+        'sisEducativo\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'sisEducativo\\Http\\Controllers\\PersonasController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonasController.php',
         'sisEducativo\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'sisEducativo\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -3621,6 +3649,7 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
         'sisEducativo\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'sisEducativo\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'sisEducativo\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'sisEducativo\\Http\\Requests\\PersonasFormRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PersonasFormRequest.php',
         'sisEducativo\\Personas' => __DIR__ . '/../..' . '/app/Personas.php',
         'sisEducativo\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'sisEducativo\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -3633,10 +3662,10 @@ class ComposerStaticInit343816c7766afc68e6cd1515246c192d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit343816c7766afc68e6cd1515246c192d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit343816c7766afc68e6cd1515246c192d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit343816c7766afc68e6cd1515246c192d::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit343816c7766afc68e6cd1515246c192d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit98a3b176e8cb55f82734fcc1fab69094::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit98a3b176e8cb55f82734fcc1fab69094::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit98a3b176e8cb55f82734fcc1fab69094::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit98a3b176e8cb55f82734fcc1fab69094::$classMap;
 
         }, null, ClassLoader::class);
     }

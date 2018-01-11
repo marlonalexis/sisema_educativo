@@ -53,14 +53,10 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<label for="projectinput5">Interested in</label>
-											<select id="projectinput5" name="interested" class="form-control">
-												<option value="none" selected="" disabled="">Interested in</option>
-												<option value="design">design</option>
-												<option value="development">development</option>
-												<option value="illustration">illustration</option>
-												<option value="branding">branding</option>
-												<option value="video">video</option>
+											<label for="estado">Estado</label>
+											<select id="estado" name="estado" class="form-control">
+												<option @if($personas->estado=='A') selected="selected" @endif value="A" >Activar</option>
+												<option @if($personas->estado=='I') selected="selected" @endif value="I">Inactivar</option>
 											</select>
 										</div>
 									</div>
