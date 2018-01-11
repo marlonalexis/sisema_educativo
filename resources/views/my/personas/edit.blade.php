@@ -9,7 +9,7 @@
 					@endforeach
 			</div>
 			@endif
-			{!!Form::model($personas,['method'=>'PATCH','route'=>['my.personas.update',$personas->idpersonas]])!!}
+			{!! Form::model($personas, ['route' => ['personas.update', $personas->idpersonas], 'method' => 'PUT']) !!}
 			{{Form::token()}}
 									<form class="form">
 							<div class="form-body">
