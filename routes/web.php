@@ -57,7 +57,7 @@ public function producto($id)
 });*/
 
 /* Ligar vista con el controlador */
-Route::resource('my/personas','PersonasController');
+Route::resource('personas','PersonasController');
 
 Route::get('/personas', 'PersonasController@index')->name('index');
 

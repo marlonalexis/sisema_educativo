@@ -23,4 +23,8 @@ class Personas extends Model
 	protected $guarded =[
 
 	];
+
+public function user() {
+    return  $this->hasOne('App\User');
+}
 }

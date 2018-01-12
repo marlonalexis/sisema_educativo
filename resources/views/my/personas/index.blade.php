@@ -2,6 +2,7 @@
 @section('contenido')
 <div class="card-header">
 <div class="row">
+	@include('alerts.success')
 	<div>
 		<h3>Listado de Personas <a href="personas/create"><button class="btn btn-primary">Nuevo</button></a></h3>
 		@include('my.personas.search')
@@ -39,7 +40,6 @@
 				</tbody>
 			</table>
         	{{ $personas->render() }}
-
 </div>
 </div>
 @endsection

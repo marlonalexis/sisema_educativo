@@ -32,7 +32,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="projectinput3">E-mail</label>
-											<input type="text" id="projectinput3" class="form-control" placeholder="E-mail" name="email">
+											<input type="text" id="projectinput3" class="form-control" placeholder="E-mail" name="email" value="{{$user->email}}" disabled="disabled">
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -90,9 +90,9 @@
 							</div>
 
 							<div class="form-actions">
-								<button type="reset" class="btn btn-warning mr-1">
+								<a href="{{ URL::previous() }}"><button type="button" class="btn btn-warning mr-1">
 									<i class="icon-cross2"></i> Cancelar
-								</button>
+								</button></a>
 								<button type="submit" class="btn btn-primary">
 									<i class="icon-check2"></i> Guardar
 								</button>

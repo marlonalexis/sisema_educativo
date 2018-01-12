@@ -9,7 +9,7 @@
 					@endforeach
 			</div>
 			@endif
-			{!!Form::open(array('url'=>'my/personas','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::open(array('url'=>'personas','method'=>'POST','autocomplete'=>'off'))!!}
 			{{Form::token()}}
 									<form class="form">
 							<div class="form-body">
@@ -18,21 +18,21 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="nombres">Nombres</label>
-											<input type="text" id="nombres" class="form-control" placeholder="Nombres" name="nombres">
+											<input type="text" id="nombres" class="form-control" placeholder="Nombres" name="nombres" value="{{ old('nombres') }}">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="apellidos">Apellidos</label>
-											<input type="text" id="apellidos" class="form-control" placeholder="Apellidos" name="apellidos">
+											<input type="text" id="apellidos" class="form-control" placeholder="Apellidos" name="apellidos" value="{{ old('apellidos') }}">
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<label for="projectinput3">E-mail</label>
-											<input type="text" id="projectinput3" class="form-control" placeholder="E-mail" name="email">
+											<label for="email">E-mail</label>
+											<input id="email" type="email" class="form-control" placeholder="E-mail" name="email" value="{{ old('email') }}">
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -41,6 +41,13 @@
 											<input type="text" id="projectinput4" class="form-control" placeholder="Phone" name="phone">
 										</div>
 									</div>
+								</div>
+
+								<h4 class="form-section"><i class="icon-clipboard4"></i> Datos de Usuario</h4>
+
+								<div class="form-group">
+									<label for="companyName">Company</label>
+									<input type="text" id="companyName" class="form-control" placeholder="Company Name" name="company">
 								</div>
 
 								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
@@ -94,9 +101,9 @@
 							</div>
 
 							<div class="form-actions">
-								<button type="reset" class="btn btn-warning mr-1">
+								<a href="{{ URL::previous() }}"><button type="button" class="btn btn-warning mr-1">
 									<i class="icon-cross2"></i> Cancelar
-								</button>
+								</button></a>
 								<button type="submit" class="btn btn-primary">
 									<i class="icon-check2"></i> Guardar
 								</button>
