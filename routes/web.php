@@ -13,7 +13,11 @@
 
 Route::get('/', function () {
     //return redirect()->route('index');
-    return view('welcome');
+    /*if (Route::has('login')){
+    	return redirect('/personas');
+    	//return view('home');
+    }*/
+    return redirect('/login');
 });
 
 /* Creacion de ruta de prueba 
@@ -56,6 +60,7 @@ public function producto($id)
 Route::resource('my/personas','PersonasController');
 
 Route::get('/personas', 'PersonasController@index')->name('index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
