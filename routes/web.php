@@ -12,7 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return redirect()->route('index');
+    /*if (Route::has('login')){
+    	return redirect('/personas');
+    	//return view('home');
+    }*/
+    return redirect('/login');
 });
 
 /* Creacion de ruta de prueba 
@@ -53,3 +58,9 @@ public function producto($id)
 
 /* Ligar vista con el controlador */
 Route::resource('my/personas','PersonasController');
+
+Route::get('/personas', 'PersonasController@index')->name('index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

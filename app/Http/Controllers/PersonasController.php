@@ -13,7 +13,7 @@ class PersonasController extends Controller
 {
     public function __construct()
     {
-
+        $this->middleware('auth');
     }
 
     public function index(Request $request)
@@ -21,9 +21,9 @@ class PersonasController extends Controller
     	if ($request) {
     		$query=trim($request->get('searchText')); //Obtener todos los registros de la base de datos
     		$personas=DB::table('personas')->where('nombres','LIKE','%'.$query.'%')
-    		->where('estado','=','A')
+    		//->where('estado','=','A')
     		->orderBy('apellidos','asc')
-    		->paginate(4);
+    		->paginate(3);
     		return view('my.personas.index',['personas'=>$personas,'searchText'=>$query]);
     	}
     }
@@ -53,13 +53,14 @@ class PersonasController extends Controller
     	$personas=Personas::findOrFail($id);
     	$personas->nombres=$request->get('nombres');
     	$personas->apellidos=$request->get('apellidos');
+        $personas->estado=$request->get('estado');
     	$personas->update();
     	return Redirect::to('my/personas');
     }
 
     public function destroy($id){
     	$personas=Personas::findOrFail($id);
-    	$personas->estado='A';
+    	$personas->estado='I';
     	$personas->update();
     	return Redirect::to('my/personas');
     }

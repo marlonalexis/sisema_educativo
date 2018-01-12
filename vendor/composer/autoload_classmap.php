@@ -3325,6 +3325,7 @@ return array(
     'sisEducativo\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'sisEducativo\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'sisEducativo\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'sisEducativo\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'sisEducativo\\Http\\Controllers\\PersonasController' => $baseDir . '/app/Http/Controllers/PersonasController.php',
     'sisEducativo\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'sisEducativo\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',

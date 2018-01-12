@@ -16,19 +16,30 @@
 					<th>Estado</th>
 					<th>Opciones</th>
 				</thead>
+				<tbody>
 				@foreach($personas as $per)
 				<tr>
 					<td>{{ $per->idpersonas}}</td>
 					<td>{{ $per->nombres}}</td>
 					<td>{{ $per->apellidos}}</td>
-					<td>{{ $per->estado}}</td>
+					@if ($per->estado == 'A')
+					<td><div class="tag tag-pill tag-success">Activo</div></td>
+					@else
+					<td><div class="tag tag-pill tag-danger">Inactivo</div></td>
+					@endif
 					<td>
 						<a href="{{URL::action('PersonasController@edit',$per->idpersonas)}}"><button class="btn btn-info">Editar</button></a>
-						<a href=""><button class="btn btn-danger">Eliminar</button></a>
+						@if ($per->estado == 'A')
+						<a href="" data-target="#modal-delete-{{$per->idpersonas}}" data-toggle="modal"><button class="btn btn-danger">Inactivar</button></a>
+						@endif
 					</td>
 				</tr>
+				@include('my.personas.modal')
 				@endforeach
+				</tbody>
 			</table>
-        	{!!$personas->render()!!}
-@endsection
+        	{{ $personas->render() }}
+
 </div>
+</div>
+@endsection
